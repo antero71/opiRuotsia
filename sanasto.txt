@@ -1,0 +1,102 @@
+be,ber,bad,bett;pyytää,rukoilla
+binda,binder,band,bundit;sitoa
+bita,biter,bet,bitit;purra
+bjuda,bjuder,bjöd,bjudit;tarjota
+bli,blir,blev,blivit;tulla joksikin
+brinna,brinner,brann,brunnit;palaa
+brista,brister,brast,brustit;mennä rikki,murtua,puuttua
+bryta,bryter,bröt,brutit;katkaista,murtaa,louhia
+bära,bär,bar,burit;kantaa
+böra,bör,borde,(bort);pitää, tulee (tehdä jtk)
+dra,drar,drog,dragit;vetää
+dricka,dricker,druck,druckit;juoda
+driva,driver,drev,drivit;ajaa,ajelehtia
+duga,duger,dög,dugt;kelvata
+dyka,dyker,gök,dykt;sukeltaa
+dö,dör,dog,dött;kuolla
+döljä,döljer,dölde,dolt;kätkeä,piilottaa
+falla,faller,föll,fallit;pudota,kaatua
+fara,far,for,farit;matkustaa,mennä
+finna,finner,fann,funnit;löytää
+finnas,finns,fanns,funnits;olla olemassa
+flyga,flyger,flög,flugit;lentää
+flyta,flyter,flöt,flutit;kellua,virrata
+frysa,fryser,frös,frusit;palella,jäätyä
+få,får,fick,fått;saada
+försvinna,försvinner,försvann,försvunnit;kadota
+ge,ger,gav,gett/givit;antaa
+gjuta,gjuter,göt,gjutit;valaa,kaataa
+glida,glider,gled,glidit;liukua
+glädja,gläder,gladde,glatt;ilahduttaa
+gripa,griper,grep,gripit;tarttua
+gå,går,gict,gått;kävellä,mennä
+göra,gör,gjorde,gjort;tehdä
+ha,har,hade,haft;omistaa,olla jklla
+heta,heter,hette,hetat;olla nimeltään
+hinna,hinner,hann,hunnit;ehtiä
+hugga,hugger,högg,huggit;hakata
+hålla,håller,höll,hållit;pitää (esim.puhe,esitelmä)
+kliva,kliver,klev,klivit;kiivetä
+knyta,knyter,knöt,knutit;solmia
+komma,kommer,kom,kommit;tulla
+krypa,kryper,kröp,krupit;ryömiä
+kunna,kan,kunde,kunnat;osata,voida
+le,ler,log,lett;hymyillä
+lida,lider,led,lidit;kärsiä,kulua(ajasta)
+ligga,ligger,låg,legat;maata,olla,sijaita
+ljuga,ljuger,ljög,ljugit;valehtella
+låta,låter,lät,låtit;antaa,sallia,kuulostaa
+lägga,lägger,lade,lagt;asettaa,panna
+-,måste,måste,-;täytyä
+njuta,njuter,njöt,njutit;nauttia
+rida,rider,red,ridit;ratsastaa
+rinna,rinner,rann,runnit;value,virrata
+riva,river,rev,rivit;repiä
+se,ser,såg,sett;nähdä
+sitta,sitter,satt,suttit;istua
+sjunga,sjunger,sjöng,sjungit;laulaa
+sjunka,sjunker,sjönk,sjunkit;upota,laskea
+skina,skiner,sken,skinit;paistaa
+skjuta,skjuter,sköt,skjutit;ampua,työntää
+-,ska,skulle,-;pitää, tulee (tehdä jtak)
+skrika,skriker,skrek,skrikit;huutaa,kirkua
+skriva,skriver,skrev,skrivit;kirjoittaa
+skryta,skryter,skröt,skrutit;kehua
+skära,skär,skar,skurit;leikata
+slippa,slipper,slapp,sluppit;päästä tekemästä jtak
+slita,sliter,slet,slitit;kuluttaa,repiä,raataa
+sluta,sluter,slöt,slutit;sulkea,solmia
+slå,slår,slog,slagit;lyödä
+slåss,slåss,slogs,slagits;tapella
+smyga,smyger,smög,smukit;hiipiä
+snyta,snyter,snöt,snutit;niistää
+sova,sover,sov,sovit;nukkua
+spricka,spricker,sprack,spruckit;haljeta,puhjeta
+sprida,sprider,spred/spridde,spridit/spritt;levittää
+springa,springer,sprang,sprungit;juosta
+sticka,sticker,stack,stuckit;pistää
+stiga,stiger,steg,stigit;nousta,astua
+stjäla,stjäl,stal,stulit;varastaa
+strida,strider,stred,stridit;taistella,riidellä
+stryka,stryker,strök,strukit;silittää
+stå,står,stod,stått;seisoa
+suga,suger,sög,sugit;imeä
+supa,super,söp,supit;juopotella,ryypätä
+svika,sviker,svek,svikit;pettää
+svältä,svälter,svalt,svultit;nähdä nälkää
+svärä,svär,svor,svurit;vannoa
+säga,säger,sade,sagt;sanoa
+sälja,säljer,sålde,sålt;myydä
+sätta,sätter,satte,satt;asettaa,panna
+ta,tar,tog,tagit;ottaa
+tiga,tiger,teg,tigit;vaieta
+töras,törs,tordes,torts;uskaltaa
+vara,är,var,varit;olla
+veta,vet,visste,vetat;tietää
+vika,viker,vek,vikit;taittaa
+vilja,vill,ville,velat;tahtoa
+vrida,vrider,vred,vridit;vääntää
+välja,väljer,valde,valt;valita
+vänja,vänjer,vande,vant;totuttaa
+äta,äter,åt,åtit;syödä
+
