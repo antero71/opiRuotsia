@@ -29,7 +29,7 @@ gjuta,gjuter,göt,gjutit;valaa,kaataa
 glida,glider,gled,glidit;liukua
 glädja,gläder,gladde,glatt;ilahduttaa
 gripa,griper,grep,gripit;tarttua
-gå,går,gict,gått;kävellä,mennä
+gå,går,gick,gått;kävellä,mennä
 göra,gör,gjorde,gjort;tehdä
 ha,har,hade,haft;omistaa,olla jklla
 heta,heter,hette,hetat;olla nimeltään
@@ -50,7 +50,7 @@ lägga,lägger,lade,lagt;asettaa,panna
 -,måste,måste,-;täytyä
 njuta,njuter,njöt,njutit;nauttia
 rida,rider,red,ridit;ratsastaa
-rinna,rinner,rann,runnit;value,virrata
+rinna,rinner,rann,runnit;valua,virrata
 riva,river,rev,rivit;repiä
 se,ser,såg,sett;nähdä
 sitta,sitter,satt,suttit;istua
@@ -58,12 +58,12 @@ sjunga,sjunger,sjöng,sjungit;laulaa
 sjunka,sjunker,sjönk,sjunkit;upota,laskea
 skina,skiner,sken,skinit;paistaa
 skjuta,skjuter,sköt,skjutit;ampua,työntää
--,ska,skulle,-;pitää, tulee (tehdä jtak)
+-,ska,skulle,-;pitää, tulee (tehdä jotakin)
 skrika,skriker,skrek,skrikit;huutaa,kirkua
 skriva,skriver,skrev,skrivit;kirjoittaa
 skryta,skryter,skröt,skrutit;kehua
 skära,skär,skar,skurit;leikata
-slippa,slipper,slapp,sluppit;päästä tekemästä jtak
+slippa,slipper,slapp,sluppit;päästä tekemästä jotakin
 slita,sliter,slet,slitit;kuluttaa,repiä,raataa
 sluta,sluter,slöt,slutit;sulkea,solmia
 slå,slår,slog,slagit;lyödä
