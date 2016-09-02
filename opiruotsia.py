@@ -1,9 +1,5 @@
 from random import randint
-def readFile(tiedostonNimi):
-    file = open(tiedostonNimi,"r")
-    lines = file.readlines()
-    file.close()
-    return lines
+from luetiedosto import readFile
 
 def tarkistaVastaus(kieli,vastaus):
     if kieli=="r" and vastaus==outer_list[index][index_ruotsi]:
