@@ -7,7 +7,7 @@ brinna,brinner,brann,brunnit;palaa
 brista,brister,brast,brustit;mennä rikki,murtua,puuttua
 bryta,bryter,bröt,brutit;katkaista,murtaa,louhia
 bära,bär,bar,burit;kantaa
-böra,bör,borde,(bort);pitää, tulee (tehdä jtk)
+böra,bör,borde,(bort);pitää, tulee (tehdä jotakin)
 dra,drar,drog,dragit;vetää
 dricka,dricker,druck,druckit;juoda
 driva,driver,drev,drivit;ajaa,ajelehtia
