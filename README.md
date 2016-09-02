@@ -11,7 +11,7 @@ Käyttöohje:
 Asenna Pythonin 3.x versio koneellesi. (https://www.python.org/downloads/)
 Ja tallenna tiedostot
 * luetiedosto.py 
-* opiruotsi.py 
+* opiruotsia.py 
 * sanasto.txt
 samaan hakemistoon.
 
