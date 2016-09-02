@@ -16,3 +16,9 @@ Ja tallenna tiedostot
 samaan hakemistoon.
 
 Käynnistä ohjelma komennolla python3 opiruotsia.py
+
+Ohjelma kysyy ensin kummalla kielellä (ruotsi tai suomi) haluat vastata
+ja sitten antaa toisella kielellä verbejä, ja sinun tehtävänäsi
+on kirjoittaa sana toisella kielellä. Ohjelma laskee yhden suorituskerran
+sisällä tilastoa paljonko saat oikeita vastauksia ja tulostaa
+yhteenvedon kun et enää valitse jatketaanko kysymykseen k.
