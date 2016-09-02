@@ -23,11 +23,16 @@ for x in range(0,len(lines)):
 index_ruotsi=0
 index_suomi=1
 kieli=input("vastaa kielellä, ruotsi=r ja suomi=s ")
-index=randint(0,100)
-if kieli=="r":
-    print("suomi "+str(outer_list[index][index_suomi]))
-else:
-    print("ruotsi "+str(outer_list[index][index_ruotsi]))
-vastaus=input("Anna sana toisella kielellä ")
-tarkistaVastaus(kieli,vastaus)
+while 1==1:
+   index=randint(0,100)
+   if kieli=="r":
+       print("suomi "+str(outer_list[index][index_suomi]))
+   else:
+       print("ruotsi "+str(outer_list[index][index_ruotsi]))
+   vastaus=input("Anna sana toisella kielellä ")
+   tarkistaVastaus(kieli,vastaus)
+   jatka=input("Jatketaanko k/e ")
+   if jatka=="e":
+      print("Kiitos ruotsin opiskelusta, tervetuloa uudelleen!")
+      break;
 
