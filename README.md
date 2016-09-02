@@ -9,7 +9,7 @@ voi treenata ruotsin epäsäännöllisiä verbejä.
 
 Käyttöohje:
 Asenna Pythonin 3.x versio koneellesi. (https://www.python.org/downloads/)
-Tallenna *luetiedosto.py, *opiruotsi.py ja *sanasto.txt
+Tallenna * luetiedosto.py, * opiruotsi.py ja * sanasto.txt
 samaan hakemistoon.
 
 Käynnistä ohjelma komennolla python3 opiruotsia.py
