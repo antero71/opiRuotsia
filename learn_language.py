@@ -20,6 +20,12 @@ def check_answer(language, answer, points):
     return points
 
 def check(answer,right_answer):
+    right = right_answer.split(",")
+    points = 0
+    for a in right:
+        if a.__contains__("answer"):
+            points+=1
+    print("points ",points)
     return len(answer)>0 and right_answer.__contains__(answer)
 
 
@@ -42,7 +48,7 @@ while 1==1:
        print("suomi " + str(outer_list[index][index_finnish]))
    else:
        print("ruotsi " + str(outer_list[index][index_sverige]))
-   answer=input("Anna sana toisella kielellä ")
+   answer=input("Anna sana toisella kielellä\n")
    points=check_answer(language, answer, points)
    resume=input("Jatketaanko k/e ")
    if resume== "e":
