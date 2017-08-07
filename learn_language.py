@@ -1,7 +1,11 @@
+# -*- coding: utf-8 -*-
 from random import randint
 from readfile import readFile
+
+
+from readfile import readFile
 def check_answer(language, answer, points):
-    if language== "r" and answer==outer_list[index][index_sverige]:
+    if language== "r" and check(answer,outer_list[index][index_sverige]):
         print("oikein!")
         points+=1
     elif language== "s" and answer==outer_list[index][index_finnish]:
@@ -14,6 +18,11 @@ def check_answer(language, answer, points):
         print("Väärin")
         print("Oikea vastaus on " + str(outer_list[index][index_finnish]))
     return points
+
+def check(answer,right_answer):
+    return len(answer)>0 and right_answer.__contains__(answer)
+
+
 
 
 outer_list=[]
