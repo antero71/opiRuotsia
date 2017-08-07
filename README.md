@@ -10,8 +10,8 @@ voi treenata ruotsin epäsäännöllisiä verbejä.
 Käyttöohje:
 Asenna Pythonin 3.x versio koneellesi. (https://www.python.org/downloads/)
 Ja tallenna tiedostot
-* luetiedosto.py 
-* opiruotsia.py 
+* readfile.py 
+* learn_language.py 
 * sanasto.txt
 samaan hakemistoon.
 
