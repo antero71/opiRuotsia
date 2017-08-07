@@ -1,19 +1,19 @@
 from random import randint
-from luetiedosto import readFile
-def tarkistaVastaus(kieli,vastaus,pisteet):
-    if kieli=="r" and vastaus==outer_list[index][index_ruotsi]:
+from readfile import readFile
+def check_answer(language, answer, points):
+    if language== "r" and answer==outer_list[index][index_sverige]:
         print("oikein!")
-        pisteet+=1
-    elif kieli=="s" and vastaus==outer_list[index][index_suomi]:
+        points+=1
+    elif language== "s" and answer==outer_list[index][index_finnish]:
         print("Oikein!")
-        pisteet+=1
-    elif kieli=="r":
+        points+=1
+    elif language== "r":
         print("Väärin")
-        print("Oikea vastaus on "+str(outer_list[index][index_ruotsi]))
+        print("Oikea vastaus on " + str(outer_list[index][index_sverige]))
     else:
         print("Väärin")
-        print("Oikea vastaus on "+str(outer_list[index][index_suomi]))
-    return pisteet
+        print("Oikea vastaus on " + str(outer_list[index][index_finnish]))
+    return points
 
 
 outer_list=[]
@@ -21,24 +21,24 @@ lines = readFile("sanasto.txt")
 for x in range(0,len(lines)):
     outer_list.append(lines[x].strip().split(";"))
 
-pisteet=0
-lukumaara=0
-index_ruotsi=0
-index_suomi=1
-kieli=input("vastaa kielellä, ruotsi=r ja suomi=s ")
+points=0
+count=0
+index_sverige=0
+index_finnish=1
+language=input("vastaa kielellä, ruotsi=r ja suomi=s ")
 while 1==1:
-   lukumaara+=1
+   count+=1
    index=randint(0,100)
-   if kieli=="r":
-       print("suomi "+str(outer_list[index][index_suomi]))
+   if language== "r":
+       print("suomi " + str(outer_list[index][index_finnish]))
    else:
-       print("ruotsi "+str(outer_list[index][index_ruotsi]))
-   vastaus=input("Anna sana toisella kielellä ")
-   pisteet=tarkistaVastaus(kieli,vastaus,pisteet)
-   jatka=input("Jatketaanko k/e ")
-   if jatka=="e":
+       print("ruotsi " + str(outer_list[index][index_sverige]))
+   answer=input("Anna sana toisella kielellä ")
+   points=check_answer(language, answer, points)
+   resume=input("Jatketaanko k/e ")
+   if resume== "e":
       print("Kiitos ruotsin opiskelusta, tervetuloa uudelleen!")
-      prosentit = pisteet/lukumaara*100
-      print("sait "+str(pisteet)+"/"+str(lukumaara)+" pistetta, eli %22.2f prosenttia oikein" % prosentit)
+      prosentit = points / count * 100
+      print("sait " + str(points) + "/" + str(count) + " pistetta, eli %22.2f prosenttia oikein" % prosentit)
       break;
 
