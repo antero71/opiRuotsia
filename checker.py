@@ -18,5 +18,5 @@ class Checker():
         #print("points ", points)
         if points > 0 and points < 4 and len(self.right_answer)<4:
             points=4
-        print("You get ", points," points")
+        #print("You get ", points," points")
         return points
