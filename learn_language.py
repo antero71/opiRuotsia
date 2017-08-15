@@ -23,33 +23,39 @@ class Learning():
         return self.word_list
 
     def get_random_word(self,language):
+        """
+
+        :param self:
+        :param language:
+        :return: randomly selected index and correct word in the selected language
+        """
         index = randint(0, 100)
-        return self.wordlist[index][language]
+        return [index,self.wordlist[index][language]]
 
 
 
-def check_answer(language, words,answer, points,index,index_sverige,index_finnish):
+def check_answer(language, words,answer, points,index):
     if language== "r":
-        p=Checker((words[index][index_sverige]).split(",")).check(answer)
+        p=Checker((words[index][Languages.FINNISH]).split(",")).check(answer)
         if p > 0 and p < 4:
             print("Osa oikein!")
-            print("Oikea vastaus on " + str(words[index][index_sverige]))
+            print("Oikea vastaus on " + str(words[index][Languages.SWEDISH]))
         elif p == 4:
             print("Kaikki oikein!!!")
         elif p == 0:
             print("Ei yhtään oikein")
-            print("Oikea vastaus on " + str(words[index][index_sverige]))
+            print("Oikea vastaus on " + str(words[index][Languages.SWEDISH]))
         points+=p;
     elif language== "s":
-        p = Checker((words[index][index_finnish]).split(",")).check(answer)
+        p = Checker((words[index][Languages.FINNISH]).split(",")).check(answer)
         if p > 0 and p < 4:
             print("Osa oikein!")
-            print("Oikea vastaus on " + str(words[index][index_finnish]))
+            print("Oikea vastaus on " + str(words[index][Languages.FINNISH]))
         elif p == 4:
             print("Kaikki oikein!!!")
         elif p == 0:
             print("Ei yhtään oikein")
-            print("Oikea vastaus on " + str(words[index][index_finnish]))
+            print("Oikea vastaus on " + str(words[index][Languages.FINNISH]))
         points += p;
     return points
 
@@ -67,13 +73,16 @@ def main():
     while 1==1:
         count+=4
         index=randint(0,100)
+        index_and_word=[]
         if language== "r":
-            print("suomi " + str(words[index][index_finnish]))
+            index_and_word=learn.get_random_word(Languages.FINNISH)
+            print("suomi " + index_and_word[1])
         else:
-            print("ruotsi " + str(words[index][index_sverige]))
-            print("ruotsi "+learn.get_random_word(Languages.SWEDISH))
+            index_and_word=learn.get_random_word(Languages.SWEDISH)
+            print("ruotsi " + index_and_word[1])
+            #print("ruotsi "+learn.get_random_word(Languages.SWEDISH))
         answer=input("Anna sana toisella kielellä\n")
-        points=check_answer(language, words,answer, points,index,index_sverige,index_finnish)
+        points=check_answer(language, words,answer, points,index_and_word[0])
         #check_answer(language, answer, points)
 
         resume=input("Jatketaanko k/e ")
