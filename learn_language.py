@@ -2,16 +2,31 @@
 from random import randint
 from readfile import readFile
 from checker import Checker
-
+from languages import Languages
 
 from readfile import readFile
 
-def create_word_list():
-    outer_list = []
-    lines = readFile("sanasto.txt")
-    for x in range(0, len(lines)):
-        outer_list.append(lines[x].strip().split(";"))
-    return outer_list
+
+class Learning():
+    def __init__(self):
+        self.word_list = self.create_word_list()
+
+    def create_word_list(self):
+        outer_list = []
+        lines = readFile("sanasto.txt")
+        for x in range(0, len(lines)):
+            outer_list.append(lines[x].strip().split(";"))
+        return outer_list
+
+    @property
+    def wordlist(self):
+        return self.word_list
+
+    def get_random_word(self,language):
+        index = randint(0, 100)
+        return self.wordlist[index][language]
+
+
 
 def check_answer(language, words,answer, points,index,index_sverige,index_finnish):
     if language== "r":
@@ -41,7 +56,9 @@ def check_answer(language, words,answer, points,index,index_sverige,index_finnis
 
 def main():
 
-    words=create_word_list()
+    learn=Learning()
+
+    words=learn.create_word_list()
     points=0
     count=0
     index_sverige=0
@@ -54,6 +71,7 @@ def main():
             print("suomi " + str(words[index][index_finnish]))
         else:
             print("ruotsi " + str(words[index][index_sverige]))
+            print("ruotsi "+learn.get_random_word(Languages.SWEDISH))
         answer=input("Anna sana toisella kielellä\n")
         points=check_answer(language, words,answer, points,index,index_sverige,index_finnish)
         #check_answer(language, answer, points)
