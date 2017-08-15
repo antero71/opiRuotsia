@@ -8,14 +8,14 @@ from languages import *
 
 class Application(Frame):
 
-    def __init__(self, master=None):
+    def __init__(self, master=None,file_name="sanasto.txt"):
         super().__init__(master)
         self.pack()
         self.create_widgets()
+        self.learn=Learning(file_name)
 
     def get_word(self,language):
-        l=Learning()
-        return l.get_random_word(language)
+        return self.learn.get_random_word(language)
 
 
     def create_widgets(self):
@@ -54,9 +54,6 @@ class Application(Frame):
         self.textinput = Text(root, height=1)
         self.textinput.pack()
 
-
-    def say_hi(self):
-        print("hi there, everyone!")
     def sel(self):
         selection = "Kirjoita alla olevaan kenttään: "
 

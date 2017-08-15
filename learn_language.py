@@ -8,13 +8,18 @@ from readfile import readFile
 
 
 class Learning():
-    def __init__(self):
+    def __init__(self,file_name):
+        self.file_name=file_name
         self.word_list = self.create_word_list()
+
+    def setFileName(self,name):
+        self.file_name=name
 
     def create_word_list(self):
         outer_list = []
-        lines = readFile("sanasto.txt")
-        for x in range(0, len(lines)):
+        lines = readFile(self.file_name)
+        self.lines_in_file = len(lines)
+        for x in range(0, self.lines_in_file):
             outer_list.append(lines[x].strip().split(";"))
         return outer_list
 
@@ -29,40 +34,52 @@ class Learning():
         :param language:
         :return: randomly selected index and correct word in the selected language
         """
-        index = randint(0, 100)
+        index = randint(0, self.lines_in_file-1)
         return [index,self.wordlist[index][language]]
 
 
 
-def check_answer(language, words,answer, points,index):
-    if language== "r":
-        p=Checker((words[index][Languages.FINNISH]).split(",")).check(answer)
-        if p > 0 and p < 4:
-            print("Osa oikein!")
-            print("Oikea vastaus on " + str(words[index][Languages.SWEDISH]))
-        elif p == 4:
-            print("Kaikki oikein!!!")
-        elif p == 0:
-            print("Ei yhtään oikein")
-            print("Oikea vastaus on " + str(words[index][Languages.SWEDISH]))
-        points+=p;
-    elif language== "s":
-        p = Checker((words[index][Languages.FINNISH]).split(",")).check(answer)
-        if p > 0 and p < 4:
-            print("Osa oikein!")
-            print("Oikea vastaus on " + str(words[index][Languages.FINNISH]))
-        elif p == 4:
-            print("Kaikki oikein!!!")
-        elif p == 0:
-            print("Ei yhtään oikein")
-            print("Oikea vastaus on " + str(words[index][Languages.FINNISH]))
-        points += p;
-    return points
+    def check_answer(self, language, words, answer, points, index):
+        """
+
+        :param language:
+        :param words: right answer
+        :param answer: user answer
+        :param points: the current user points
+        :param index: index where the word found
+        :return:
+        """
+        ret=[]
+        if language== "r":
+            p=Checker((words[index][Languages.SWEDISH]).split(",")).check(answer)
+            if p > 0 and p < 4:
+                ret.append("Osa oikein!")
+                ret.append("Oikea vastaus on " + str(words[index][Languages.SWEDISH]))
+            elif p == 4:
+                ret.append("Kaikki oikein!!!")
+            elif p == 0:
+                ret.append("Ei yhtään oikein")
+                ret.append("Oikea vastaus on " + str(words[index][Languages.SWEDISH]))
+            points+=p;
+            ret.insert(0,points)
+        elif language== "s":
+            p = Checker((words[index][Languages.FINNISH]).split(",")).check(answer)
+            if p > 0 and p < 4:
+                ret.append("Osa oikein!")
+                ret.append("Oikea vastaus on " + str(words[index][Languages.FINNISH]))
+            elif p == 4:
+                ret.append("Kaikki oikein!!!")
+            elif p == 0:
+                ret.append("Ei yhtään oikein")
+                ret.append("Oikea vastaus on " + str(words[index][Languages.FINNISH]))
+            points += p;
+            ret.insert(0,points)
+        return ret
 
 
 def main():
 
-    learn=Learning()
+    learn=Learning("sanasto.txt")
 
     words=learn.create_word_list()
     points=0
@@ -70,11 +87,13 @@ def main():
     index_sverige=0
     index_finnish=1
     language=input("vastaa kielellä, ruotsi=r ja suomi=s ")
+    checked_values = [0]
     while 1==1:
         count+=4
         index=randint(0,100)
         index_and_word=[]
-        if language== "r":
+
+        if language=="r":
             index_and_word=learn.get_random_word(Languages.FINNISH)
             print("suomi " + index_and_word[1])
         else:
@@ -82,14 +101,22 @@ def main():
             print("ruotsi " + index_and_word[1])
             #print("ruotsi "+learn.get_random_word(Languages.SWEDISH))
         answer=input("Anna sana toisella kielellä\n")
-        points=check_answer(language, words,answer, points,index_and_word[0])
+        checked_values=learn.check_answer(language, words,answer, checked_values[0],index_and_word[0])
+        length=len(checked_values)
+
+        if length==3:
+            print(checked_values[1])
+            print(checked_values[2])
+        else:
+            print(checked_values[1])
+        print("Sinulla on nyt", checked_values[0], " pistettä.")
         #check_answer(language, answer, points)
 
         resume=input("Jatketaanko k/e ")
         if resume== "e":
             print("Kiitos ruotsin opiskelusta, tervetuloa uudelleen!")
-            percent = points / count * 100
-            print("sait " + str(points) + "/" + str(count) + " pistetta, eli %22.2f prosenttia oikein" % percent)
+            percent = checked_values[0] / count * 100
+            print("sait " + str(checked_values[0]) + "/" + str(count) + " pistetta, eli %22.2f prosenttia oikein" % percent)
             break;
 
 if __name__=='__main__':

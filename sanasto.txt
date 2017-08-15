@@ -84,7 +84,7 @@ suga,suger,sög,sugit;imeä
 supa,super,söp,supit;juopotella,ryypätä
 svika,sviker,svek,svikit;pettää
 svältä,svälter,svalt,svultit;nähdä nälkää
-svärä,svär,svor,svurit;vannoa
+svära,svär,svor,svurit;vannoa
 säga,säger,sade,sagt;sanoa
 sälja,säljer,sålde,sålt;myydä
 sätta,sätter,satte,satt;asettaa,panna
