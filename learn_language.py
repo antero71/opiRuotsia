@@ -39,7 +39,7 @@ class Learning():
 
 
 
-    def check_answer(self, language, words, answer, points, index):
+    def check_answer(self, language, words=None, answer=None, points=None, index=None):
         """
 
         :param language:
@@ -49,8 +49,11 @@ class Learning():
         :param index: index where the word found
         :return:
         """
+        if words == None:
+            words=self.word_list
         ret=[]
-        if language== "r":
+        if language== "r" or language==Languages.SWEDISH:
+
             p=Checker((words[index][Languages.SWEDISH]).split(",")).check(answer)
             if p > 0 and p < 4:
                 ret.append("Osa oikein!")
@@ -62,7 +65,7 @@ class Learning():
                 ret.append("Oikea vastaus on " + str(words[index][Languages.SWEDISH]))
             points+=p;
             ret.insert(0,points)
-        elif language== "s":
+        elif language== "s" or language==Languages.FINNISH:
             p = Checker((words[index][Languages.FINNISH]).split(",")).check(answer)
             if p > 0 and p < 4:
                 ret.append("Osa oikein!")

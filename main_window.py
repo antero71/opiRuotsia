@@ -5,7 +5,6 @@ from languages import *
 
 
 
-
 class Application(Frame):
 
     def __init__(self, master=None,file_name="sanasto.txt"):
@@ -13,9 +12,25 @@ class Application(Frame):
         self.pack()
         self.create_widgets()
         self.learn=Learning(file_name)
+        self.points=0
+        self.word=""
 
     def get_word(self,language):
         return self.learn.get_random_word(language)
+
+    def check_answer(self, event):
+        answer_string = self.textinput.get("1.0", END)
+        verb=self.word[1]
+        index=self.word[0]
+        points=self.points
+        ret=self.learn.check_answer(self.v.get(), None, answer_string, points, index)
+        if len(ret)>0:
+            self.points=ret[0]
+
+        if len(ret)==3:
+            self.label_check_answer.config(text=ret[1]+" "+ret[2])
+        elif len(ret)==2:
+            self.label_check_answer.config(text=ret[1])
 
 
     def create_widgets(self):
@@ -51,18 +66,26 @@ class Application(Frame):
         self.label_selection = Label(root)
         self.label_selection.pack()
 
-        self.textinput = Text(root, height=1)
+        self.textinput = Text(root, height=1,width=50)
+        self.textinput.bind("<KeyPress-Return>",self.check_answer)
         self.textinput.pack()
+
+        self.label_check_answer=Label(root)
+        self.label_check_answer.pack()
+
+
 
     def sel(self):
         selection = "Kirjoita alla olevaan kenttään: "
 
         if self.v.get()==Languages.FINNISH:
-            self.label_verb.config(text=self.get_word(Languages.FINNISH))
+            self.word=self.get_word(Languages.FINNISH)
+            self.label_verb.config(text=self.word[1])
             selection+="verbin ruotsinkielinen käännös aikamuotoineen"
 
         else:
-            self.label_verb.config(text=self.get_word(Languages.SWEDISH))
+            self.word=self.get_word(Languages.SWEDISH)
+            self.label_verb.config(text=self.word[1])
             selection += "verbin suomenkielinen käännös."
 
         self.label_selection.config(text=selection)
