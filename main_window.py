@@ -28,9 +28,9 @@ class Application(Frame):
             self.points=ret[0]
 
         if len(ret)==3:
-            self.label_check_answer.config(text="Sinulla on pisteitä "+str(points)+" "+ret[1]+" "+ret[2])
+            self.label_check_answer.config(text="Sinulla on pisteitä "+str(points)+"\n"+ret[1]+"\n"+ret[2])
         elif len(ret)==2:
-            self.label_check_answer.config(text="Sinulla on pisteitä "+str(points)+" "+ret[1])
+            self.label_check_answer.config(text="Sinulla on pisteitä "+str(points)+"\n"+ret[1])
 
 
     def create_widgets(self):
@@ -46,13 +46,13 @@ class Application(Frame):
                     padx=20,
                     variable=self.v,
                     value=Languages.FINNISH,
-                    command=self.sel).pack(anchor=W)
+                    command=self.select_language).pack(anchor=W)
         self.swedish=Radiobutton(root,
                     text="Ruotsi -> Suomi",
                     padx=20,
                     variable=self.v,
                     value=Languages.SWEDISH,
-                    command=self.sel).pack(anchor=W)
+                    command=self.select_language).pack(anchor=W)
 
         self.quit = Button(self, text="QUIT", fg="red",
                               command=root.destroy)
@@ -73,9 +73,12 @@ class Application(Frame):
         self.label_check_answer=Label(root)
         self.label_check_answer.pack()
 
+        self.play_again_button=Button(root,text="Uusi sana",command=self.select_language)
+        self.play_again_button.pack()
 
 
-    def sel(self):
+
+    def select_language(self):
         selection = "Kirjoita alla olevaan kenttään: "
 
         if self.v.get()==Languages.FINNISH:
