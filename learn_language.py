@@ -52,7 +52,7 @@ class Learning():
         if words == None:
             words=self.word_list
         ret=[]
-        if language== "r" or language==Languages.SWEDISH:
+        if language== "r" or language==Languages.FINNISH:
 
             p=Checker((words[index][Languages.SWEDISH]).split(",")).check(answer)
             if p > 0 and p < 4:
@@ -65,7 +65,7 @@ class Learning():
                 ret.append("Oikea vastaus on " + str(words[index][Languages.SWEDISH]))
             points+=p;
             ret.insert(0,points)
-        elif language== "s" or language==Languages.FINNISH:
+        elif language== "s" or language==Languages.SWEDISH:
             p = Checker((words[index][Languages.FINNISH]).split(",")).check(answer)
             if p > 0 and p < 4:
                 ret.append("Osa oikein!")
