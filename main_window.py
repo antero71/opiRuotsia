@@ -28,9 +28,9 @@ class Application(Frame):
             self.points=ret[0]
 
         if len(ret)==3:
-            self.label_check_answer.config(text="Sinulla on pisteitä "+str(points)+"\n"+ret[1]+"\n"+ret[2])
+            self.label_check_answer.config(text="Sinulla on pisteitä "+str(ret[0])+"\n"+ret[1]+"\n"+ret[2])
         elif len(ret)==2:
-            self.label_check_answer.config(text="Sinulla on pisteitä "+str(points)+"\n"+ret[1])
+            self.label_check_answer.config(text="Sinulla on pisteitä "+str(ret[0])+"\n"+ret[1])
 
 
     def create_widgets(self):
