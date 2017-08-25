@@ -68,6 +68,7 @@ class Application(Frame):
 
         self.textinput = Text(root, height=1,width=50)
         self.textinput.bind("<KeyPress-Return>",self.check_answer)
+        self.textinput.focus_set()
         self.textinput.pack()
 
         self.label_check_answer=Label(root)
@@ -79,7 +80,7 @@ class Application(Frame):
 
 
     def select_language(self):
-        selection = "Kirjoita alla olevaan kenttään: "
+        selection = "Kirjoita alla olevaan kenttään "
 
         if self.v.get()==Languages.FINNISH:
             self.word=self.get_word(Languages.FINNISH)
